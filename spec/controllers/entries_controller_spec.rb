@@ -18,7 +18,7 @@ describe EntriesController do
 
       it "redirects to entry listings" do
         post :create, entry: attributes_for(:entry)
-        expect(response).to redirect_to(entries_path)
+        expect(response).to redirect_to(root_path)
       end
     end
 
@@ -29,5 +29,22 @@ describe EntriesController do
       end
     end
   end
+
+  describe 'DELETE #destroy' do
+    before :each do
+      @entry = create(:entry)
+    end
+
+    it "deletes the entry from the database" do
+      expect{
+        delete :destroy, id: @entry
+      }.to change(Entry,:count).by(-1)
+    end
+
+    it "redirects to home listings page" do
+      delete :destroy, id: @entry
+      expect(response).to redirect_to root_path
+    end
+  end  
 
 end

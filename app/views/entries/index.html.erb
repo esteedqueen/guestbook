@@ -13,7 +13,7 @@
     <%= entry.name %>
     <%= entry.message %>
     <%= time_ago_in_words(entry.created_at).gsub(/about|less than|almost|over/, '').strip + " ago" %>
-    <%= link_to 'Delete', entry, method: :delete%>
+    <%= button_to 'Delete', entry, method: :delete%>
   </li>
   <% end %>
 </ul>

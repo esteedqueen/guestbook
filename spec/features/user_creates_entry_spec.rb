@@ -10,7 +10,7 @@ feature 'User creates an entry' do
     }.to change(Entry, :count).by(1)
     entry = Entry.last
     expect(entry).to_not be_nil
-    expect(current_path).to eq(entries_path)
+    expect(current_path).to eq(root_path)
     expect(page).to have_content('successfully created')
     expect(page).to have_css '.listings li', text: "Esther"
   end

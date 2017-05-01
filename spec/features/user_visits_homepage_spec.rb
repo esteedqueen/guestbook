@@ -14,6 +14,6 @@ feature 'visits homepage' do
 
     expect(page).to have_css('.listings li')
     expect(page).to have_content('Peter Holla')
-    expect(page).to have_content('Delete')
+    expect(page).to have_css('.button_to', 'Delete')
   end
 end

@@ -11,11 +11,17 @@ class EntriesController < ApplicationController
   def create
     @entry = Entry.create(entry_params)
     if @entry.save
-      redirect_to entries_path, notice: 'Entry successfully created'
+      redirect_to root_path, notice: 'Entry successfully created'
     else
       render :new
     end
   end
+
+  def destroy
+    @entry = Entry.find(params[:id])
+    @entry.destroy
+    redirect_to root_path, notice: 'Entry deleted'
+  end  
 
   private
 
