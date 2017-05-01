@@ -13,26 +13,26 @@ This documents the steps that are necessary to get the application up and runnin
 
 You're going to need:
 
-Linux or OS X — Windows may work, but I'm not sure as this instruction is for Linux or OS X
-Ruby, version 2.2.5 or newer - I used 2.3.1
-Bundler — If Ruby is already installed, but the bundle command doesn't work, just run gem install bundler in a terminal.
+  - Linux or OS X — Windows may work, but I'm not sure as this instruction is for Linux or OS X
+  - Ruby, `version 2.2.5` or newer - I used version  `2.3.1`
+  - Bundler — If Ruby is already installed, but the bundle command doesn't work, just run gem install bundler in a terminal.
 
 ## Getting Set Up
 
-  1 Clone the repository
+  1. Clone the repository
 ```
 $ git clone git@github.com:esteedqueen/guestbook.git
 $ cd guestbook
 
 ```
-  2 Run setup to install the gems configurations and setup the database
+  2. Run setup to install the gems configurations and setup the database
 
 ```
 $ bin/setup
 
 ```
 
-  2 Run rails server
+  3. Run rails server
 
 ```
 $ rails s
