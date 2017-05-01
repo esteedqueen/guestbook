@@ -1,8 +1,19 @@
 <p id="notice"><%= notice %></p>
-<div>
+<div class="create-entry">
 
   <h1>New Entry</h1>
 
   <%= render 'form' %>
 
 </div>
+
+<ul class="listings">
+  <% @entries.each do |entry| %>
+  <li>
+    <%= entry.name %>
+    <%= entry.message %>
+    <%= time_ago_in_words(entry.created_at).gsub(/about|less than|almost|over/, '').strip + " ago" %>
+    <%= link_to 'Delete', entry, method: :delete%>
+  </li>
+  <% end %>
+</ul>

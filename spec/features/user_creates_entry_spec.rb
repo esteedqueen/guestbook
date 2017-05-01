@@ -12,7 +12,7 @@ feature 'User creates an entry' do
     expect(entry).to_not be_nil
     expect(current_path).to eq(entries_path)
     expect(page).to have_content('successfully created')
-    # expect(page).to have_css 'table td', text: "Esther"
+    expect(page).to have_css '.listings li', text: "Esther"
   end
 
   scenario 'unsuccessfully with invalid data' do

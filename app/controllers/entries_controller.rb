@@ -1,7 +1,7 @@
 class EntriesController < ApplicationController
-  # before_action :find_entry
   def index
     @entry = Entry.new
+    @entries = Entry.order('created_at DESC')
   end
 
   def new
@@ -23,7 +23,4 @@ class EntriesController < ApplicationController
     params.require(:entry).permit(:name, :message)
   end
 
-  def find_entry
-    @entry = Entry.find(params[:id])
-  end
 end
