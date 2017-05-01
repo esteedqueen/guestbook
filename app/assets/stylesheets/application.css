@@ -13,3 +13,108 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+  font-family: "Proxima Nova";
+  font-weight: 100;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100;
+}
+
+.wrapper {
+  width: 60%;
+  margin: 60px auto;
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+#notice-wrapper{
+  position: absolute;
+  top: 0;
+  width: 60%;
+  z-index: 999;
+  background: rgba(135, 216, 211, 0.85);
+  .notice {
+    padding: 2.5rem 0;
+    text-align: center;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+  }  
+}
+
+#intro {
+  margin: 2.75rem 0 1.75rem 0;
+  text-align: center;
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+#entry-form {
+  position: relative;
+  margin: 1rem 1.5%;
+  width: 100%;
+}
+
+#entries .entry {
+  background: #F8F9FA;
+  float: left;
+  margin: 1rem 1.5%;
+  border: 1px solid #E4E4E4;
+  border-radius: .3rem .3rem 0 0;
+}
+
+.entry_message h3 {
+    margin: 0;
+    font-weight: 100;
+    padding: 1rem 5%;
+    border-bottom: 1px solid #E4E4E4;
+    font-size: 1.25rem;
+  }
+
+.data {
+  padding: .75rem 10%;
+  color: #969696;
+  margin: 0;
+  font-size: .8rem;
+}
+
+.time {
+  float: left;
+}
+.buttons {
+  float: right;
+  padding-bottom: 10px;
+}
+
+.delete-button {
+  color: red;
+}
+.submit-button {
+  color: blue;
+}
+
+
+input {
+  font-size: 0.875em;
+  padding: 0px 15px 0px 15px;
+}
+
+textarea {
+  width: 200px;
+  max-width: 200px;
+  height: 50px;
+  max-height: 50px;
+  padding: 15px;
+}

@@ -1,7 +1,7 @@
 class EntriesController < ApplicationController
   def index
-    @entry = Entry.new
     @entries = Entry.order('created_at DESC')
+    @entry = Entry.new
   end
 
   def new
@@ -13,7 +13,7 @@ class EntriesController < ApplicationController
     if @entry.save
       redirect_to root_path, notice: 'Entry successfully created'
     else
-      render :new
+      render :new, notice: 'Entry in invalid'
     end
   end
 

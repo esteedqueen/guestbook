@@ -12,7 +12,7 @@ feature 'visits homepage' do
     peter = create(:entry, name: "Peter", message: "Holla")
     visit root_path
 
-    expect(page).to have_css('.listings li')
+    expect(page).to have_css('.listings .entry')
     expect(page).to have_content('Peter Holla')
     expect(page).to have_css('.button_to', 'Delete')
   end

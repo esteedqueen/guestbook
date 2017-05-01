@@ -1,19 +1,30 @@
-<p id="notice"><%= notice %></p>
-<div class="create-entry">
+<div id="entry-form">
 
-  <h1>New Entry</h1>
-
+  <h4>Enter New Entry</h4>
   <%= render 'form' %>
 
 </div>
 
-<ul class="listings">
-  <% @entries.each do |entry| %>
-  <li>
-    <%= entry.name %>
-    <%= entry.message %>
-    <%= time_ago_in_words(entry.created_at).gsub(/about|less than|almost|over/, '').strip + " ago" %>
-    <%= button_to 'Delete', entry, method: :delete%>
-  </li>
+<div id="entries">
+  <% if @entries.any? %>
+    <div class="listings">
+      <% @entries.each do |entry| %>
+      <div class="entry">
+        <div class="entry_message">
+          <h3><%= entry.name %> </h3>
+          <h3><%= entry.message %> </h3>
+          <div class="data">
+            <div class="time">
+              <%= time_ago_in_words(entry.created_at).gsub(/about|less than|almost|over/, '').strip + " ago" %>
+            </div>
+            <div class="buttons">
+              <%= button_to 'Delete', entry, method: :delete, :class => 'delete-button' %>
+            </div>
+          </div>          
+        </div>
+      </div>
+      <% end %>
+    </div>
   <% end %>
-</ul>
+
+</div>

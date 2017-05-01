@@ -6,8 +6,12 @@ describe Entry do
     it { should validate_presence_of :message }
   end
 
-  it "has a valid factory" do
+  it "has a valid data" do
     expect(build(:entry)).to be_valid
+  end
+
+  it "has an invalid data" do
+    expect(build(:entry, name: nil)).to_not be_valid
   end
 
 end

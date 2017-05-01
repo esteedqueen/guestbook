@@ -20,6 +20,7 @@ describe EntriesController do
         post :create, entry: attributes_for(:entry)
         expect(response).to redirect_to(root_path)
       end
+
     end
 
     context "with invalid params" do
@@ -27,6 +28,11 @@ describe EntriesController do
         post :create, entry: attributes_for(:entry, name: nil)
         expect(assigns(:entry)).to_not be_valid
       end
+
+      it "entry is invalid and redirects to entry listings" do
+        post :create, entry: attributes_for(:entry, name: nil)
+        expect(response).to render_template(:new)
+      end      
     end
   end
 

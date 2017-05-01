@@ -6,10 +6,17 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<h1>All Entries</h1>
+<body class="wrapper">
 
-<%= yield %>
+  <% if notice %>
+    <div id="notice-wrapper">
+      <p class="notice"><%= notice %></p>
+    </div>
+  <% end %>
+
+  <h1 id="intro">All Entries</h1>
+
+  <%= yield %>
 
 </body>
 </html>
