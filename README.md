@@ -5,8 +5,6 @@ Guestbook is a simple Rails application that allows you:
  - create an entry with your name and message
  - delete a guestbook entry
 
-
-# Development
 This documents the steps that are necessary to get the application up and running on your machine
 
 ## Prerequisites
@@ -45,5 +43,9 @@ $ rails s
 
 ```
 $ rspec
+
+OR
+
+$ rake
 
 ```
