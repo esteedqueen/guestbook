@@ -8,6 +8,7 @@ AllCops:
     - 'Gemfile'
     - 'bin/setup'
     - 'bin/spring'
+    - 'bin/rspec'
 
 # for some rails default files, e.g application.rb
 Metrics/LineLength:
@@ -31,14 +32,5 @@ Style/BlockComments:
 
 Style/StringLiterals:
   Exclude:
-    - 'bin/rspec'
     - 'config/application.rb'
-    - 'spec/rails_helper.rb'    
-
-Style/EmptyLineAfterMagicComment:
-  Exclude:
-    - 'bin/rspec'
-
-Style/AlignParameters:
-  Exclude:
-    - 'bin/rspec'
+    - 'spec/rails_helper.rb'
