@@ -21,12 +21,11 @@ class EntriesController < ApplicationController
     @entry = Entry.find(params[:id])
     @entry.destroy
     redirect_to root_path, notice: 'Entry deleted'
-  end  
+  end
 
   private
 
   def entry_params
     params.require(:entry).permit(:name, :message)
   end
-
 end

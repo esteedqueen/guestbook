@@ -9,11 +9,11 @@ feature 'visits homepage' do
   end
 
   scenario 'should have list of entries' do
-    peter = create(:entry, name: "Peter", message: "Holla")
+    create(:entry, name: 'Peter', message: 'Holla')
     visit root_path
 
     expect(page).to have_css('.listings .entry')
     expect(page).to have_content('Peter Holla')
-    expect(page).to have_css('.button_to', 'Delete')
+    expect(page).to have_button('Delete')
   end
 end

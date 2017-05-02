@@ -1,23 +1,23 @@
-<div id="entry-form">
+<div id='entry-form'>
 
-  <h4>Enter New Entry</h4>
+  <h4> Enter New Entry </h4>
   <%= render 'form' %>
 
 </div>
 
-<div id="entries">
+<div id='entries'>
   <% if @entries.any? %>
-    <div class="listings">
+    <div class='listings'>
       <% @entries.each do |entry| %>
-      <div class="entry">
-        <div class="entry_message">
+      <div class='entry'>
+        <div class='entry_message'>
           <h3><%= entry.name %> </h3>
           <h3><%= entry.message %> </h3>
-          <div class="data">
-            <div class="time">
-              <%= time_ago_in_words(entry.created_at).gsub(/about|less than|almost|over/, '').strip + " ago" %>
+          <div class='data'>
+            <div class='time'>
+              <%= time_ago_in_words(entry.created_at).gsub(/about|less than|almost|over/, '').strip + ' ago' %>
             </div>
-            <div class="buttons">
+            <div class='buttons'>
               <%= button_to 'Delete', entry, method: :delete, :class => 'delete-button' %>
             </div>
           </div>          
