@@ -1,13 +1,15 @@
 source 'https://rubygems.org'
+ruby '2.5.1'
 
-gem 'rails', '4.2.5'
-gem 'sqlite3'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails'
 gem 'jquery-rails'
+gem 'rails', '5.2.0'
+gem 'sqlite3'
+gem 'sass-rails'
+gem 'uglifier'
 
 group :development do
+  gem 'listen'
   gem 'rubocop', '~> 0.48.1', require: false
 end
 
@@ -20,5 +22,6 @@ group :test do
   gem 'capybara'
   gem 'faker'
   gem 'shoulda-matchers'
+  gem 'rails-controller-testing'
 end
 

@@ -13,7 +13,8 @@ feature 'visits homepage' do
     visit root_path
 
     expect(page).to have_css('.listings .entry')
-    expect(page).to have_content('Peter Holla')
+    expect(page).to have_content('Peter')
+    expect(page).to have_content('Holla')
     expect(page).to have_button('Delete')
   end
 end
