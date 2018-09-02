@@ -20,3 +20,8 @@
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+# Environment credentials
+.env
+.env.production
+.env.staging
