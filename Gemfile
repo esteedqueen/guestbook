@@ -7,6 +7,8 @@ gem 'rails', '5.2.0'
 gem 'sqlite3'
 gem 'sass-rails'
 gem 'uglifier'
+gem 'pg'
+gem 'puma'
 
 group :development do
   gem 'listen'
@@ -25,3 +27,6 @@ group :test do
   gem 'rails-controller-testing'
 end
 
+group :production, :staging do
+  gem 'rails_12factor'
+end
